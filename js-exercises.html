@@ -1,18 +1,76 @@
-<script type="text/javascript">
 
-// Exercises:
+
+<!-- // Exercises:
 // 1.Given a number between 0 and 6 representing the days of the week, print "Go to work." if it's a work day and "Sleep in." if it's a weekend day. You can set up an array for the days of the week, or for extra credit, you can check out the JS Date object here).
  
+ // *******Alternative************************ -->
+ <script type="text/javascript">
+// var dayIndexInArray = weekdays.indexOf(dayOfweek);
+// //console.log(dayIndexInArray)
+// if ((dayIndexInArray == 0) || (dayIndexInArray == 6)){
+// 	console.log("sleep in")
+// }else if ((dayIndexInArray >= 1) && (dayIndexInArray <= 5)){
+// 	console.log("go to work")
+// }else{
+// 	console.log("Nice try . there are 7 days in the week. you have to pick one for me to work")
+// }
 
-var userInput = prompt("Please enter a day of the week")
-var daysOfWeek = ['Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday','Sunday']
-if (userInput.toUpperCase() == daysOfWeek.indexOf(0,4)) { //takes into account all upper/or lower case options for user input)
-	console.log("Go to work")
-}else if (userInput.toUpperCase() == daysOfWeek.indexOf(5,6)){
-	console.log("Sleep in")
-}
+
+
+
+// var userInput = prompt("Please enter a day of the week")
+// var daysOfWeek = ['Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday','Sunday'];
+// if (userInput.toUpperCase() == daysOfWeek.indexOf("daysOfWeek")) { //takes into account all upper/or lower case options for user input)
+// 	console.log("Go to work")
+// }else if (userInput.toUpperCase() == daysOfWeek.indexOf(5,6)){
+// 	console.log("Sleep in")
+// }
+
+// // *********ALTERNATIVE********************
+// var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"];
+// var dayOfWeek = "Thursday";
+// if(dayOfWeek == weekdays[0]){
+// 	console.log("Go to church , you heathen")
+// }else if (dayOfWeek == weekdays[1]){
+// 	console.log("Monday Sucks")
+// 	// other days...
+// }else{
+// 	console.log("hurra, it's Saturday")
+
+
+
+// /****************FOR LOOP****************
+// parameter 1. init variable to use as a counter
+// parameter 2. decided if loop should keep going
+// parameter 3. what do do at the end of the loop each iteration.
+// i = iterator var i ( temporary variable) (let i=0) (block level variable only exists within {})
+
+// will keep going the lenghth of weekdays array and will add 1 until i > length of weekdays. i = the element index in the weekdays array.
+
+// for (let i=0; i < weekdays.lenth; i++){
+// 	if(dayOfWeek == weekdays[i]){
+// 		if ((i === 0) || (i == 6)) {
+// 			console.log("sleep in")
+// 		}else{
+// 			console.log("Got to work")
+// 		}
+// 	}
+// }	
+	
 
 // 2. Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
+ var monthEntered = prompt("Enter a month number ( between 1-12)");
+ 	if ((monthEntered == 9) || (monthEntered == 4) || (monthEntered == 6) || (monthEntered == 11){
+ 		console.log()
+ 	}
+
+ monthIndex = monthEntered -1;
+ console.log(monthsAsObject[monthEntered])
+ console.log(months[monthIndex]) + "days in" + monthIndex)
+
+
+
+
 
 
  

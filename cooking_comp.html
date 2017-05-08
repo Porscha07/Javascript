@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battle of the Most EPIC Cooking Competitions</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css" media="screen">
+
+	</style>
+</head>
+<body>
+
+<div id="game-wrapper">
+	<div class="text-center"><img src="./dragon-assets/e17.jpg" name="dragonImage">
+	</div>
+	<div id="message" class="text-center"><strong> Beware, you are about to enter into the most contested debate of "ALL TIME", what may that be?... So glad you asked! What is the most EPIC cooking competion EVER!?!?!?!?!? CHOOSE WISELY....</strong>
+	</div>
+	<div class="text-center">
+		<buttom class="btn btn-default" onclick="rollDice();"> <strong>CHOOSE!</strong></buttom>
+	</div>
+	<div class="text-center">
+		<img src="dragon-assets/d1.gif" name="die1Image">
+		<img src="dragon-assets/d1.gif" name="die2Image">
+	</div>
+</div>
+
+
+
+
+
+
+<script type ="text/javascript">
+
+	// var health = 10;
+
+	function rollDice(){
+		// console.log("The use clicked the Fight button")
+		//get a randome number between 1 and 6
+		var randomDie1 = Math.ceil(Math.random() * 20);
+		var randomDie2 = Math.ceil(Math.random() * 20);
+		// console.log(randomDie1);
+		// console.log(randomDie2);
+		var die1 = "dragon-assets/d" + randomDie1 + ".gif"
+		var die2 = "dragon-assets/d" + randomDie2 + ".gif"
+		document.images.die1Image.src =die1;
+		document.images.die2Image.src =die2;
+
+		if(randomDie1 + randomDie2 > 10){
+			document.images.dragonImage.src= "./dragon-assets/download.jpeg"; 
+			document.getElementById('message').innerHTML = "Who can resist the kids! IMO, they are the most talented of them all...";
+		}else{
+			document.images.dragonImage.src= "./dragon-assets/d9.jpg";
+			document.getElementById('message').innerHTML = "Great contender, and by far the most entertaing..."
+		}
+	}
+}
+</script>
+</body>
+</html>
