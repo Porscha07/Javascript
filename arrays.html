@@ -1,0 +1,108 @@
+<script type ="text/javascript">
+
+// Arrays = Python lists
+// single variable with a numbered list of parts.
+
+// var student1 = 'daniel'
+// var student2 = 'Merilee'
+// var student3 = 'chris'
+// var student4 = 'stephen'
+
+// var students = [];
+// students=['daniel','merilee','chris','stephen']
+// console.log(students);
+// console.log(students.length);
+
+// // like python( and pretty much every other language) the first index is 0 any data type can go in any index.
+
+// // -booleans
+// // -strings
+// // -numbers(float/integers)
+// // -objects
+// // -array
+
+
+// var nfcSouth = [
+// 'falcons',
+// 'panthers',
+// 'saints',
+// 'bucs'
+// ]
+
+// console.log(ncfSouth[0])
+// console.log(nfcSouth[4]) // undefined even if out of bounds/range
+
+// //append = push in JS add to the end
+// nfcSouth.push('cowboys');
+// console.log(nfcSouth);
+// nfcSouth.pop(); //  pop method - will remove the last element
+// console.log(nfcSouth);
+
+
+// //slice method- gets you a copy (DOES NOT CHANGE ORIGINAL) array from x to y ( y not included)
+// console.log(nfcSouth.slice(1,3))
+// console.log(nfcSouth.slice(-2,-1))
+
+
+// // splice method will change the array ( remove or add stuff)( take atleast one parameter aka what position to add or remove the item). can rearrange the array. allows you to add and remove elements in an array at any 
+// // index argument 1 = where to start, 
+// // argument 2 = how many to delete,
+// //  arguement 3= what to insert at arguement 1.
+
+// nfcSouth.splice(1,0,"cowboys");
+// console.log(ncfSouth);
+
+
+// 4 common array methods
+// pop
+// push
+// slice
+// splice ( allows you to pop then push something else)
+
+var atlTeams = [
+"falcons",
+"braves",
+"hawks",
+"thrashers"
+]
+
+var newTeam = prompt("please enter the new team in town");
+// atlTeams.pop();
+// atlTeams.push(newTeam);
+atlTeams.splice(1,1,newTeam,newTeam)
+console.log(atlTeams);
+
+if(atlTeams[-1] == "Atl United") {
+	console.log("Correct team added!")
+
+}
+
+
+// 99 bottles of beer on the wall..
+//loop
+numberNotGuessed = false;
+while(numberNotGuessed){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
