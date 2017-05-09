@@ -135,11 +135,11 @@ for(i=0; i<players.length; i++){
 
 
 
-// * Print the average playing time of the starters.
+// * Print the average playing time of the starters(5).
 var sumAvgMinutes = 0;
 
-for(i =0; i < players.length; i++){
-  if (players[i].starter == true){
+for(i =0; i < players.length; i++){ // could use let
+  if (players[i].starter == true){ // can remove boolean all together
     sumAvgMinutes += players[i].avgMinutesPlayed;
     // console.log(sumAvgMinutes);
     console.log(avgOfAverage)
@@ -151,11 +151,109 @@ var avgOfAverage = (sumAvgMinutes / 5);
 console.log(avgOfAverage)
 //answer- 32.160000000000004
 
-// * Print the average playing time of the bench players.
+
+// **********alternative**********
+var sumAvgMinutes = 0;
+var starters=[];
+for(i =0; i < players.length; i++){ // could use let
+  if (players[i].starter){
+  starters.push(players[i]);
+
+
+   // can remove boolean all together
+    sumAvgMinutes += players[i].avgMinutesPlayed;
+    // console.log(sumAvgMinutes);
+    console.log(avgOfAverage)
+    }
+
+// * Print the average playing time of the bench(8) players.
+
+var sumAvgMinutes = 0;
+
+for(let i =0; i < players.length; i++){
+  if (players[i].starter == false){
+    sumAvgMinutes += players[i].avgMinutesPlayed;
+    // console.log(sumAvgMinutes);
+    console.log(avgOfAverage)
+    }
+
+}
+var avgOfAverage = (sumAvgMinutes / 5);
+
+console.log(avgOfAverage)
+//answer- 19.22000000000002
+
+
+
+
+*********alternative**********
+
+
 // * Create an array of the names of each player.
+
+var playerNames = [];
+for(let i=0; i<players.length; i++){
+  playerNames.push(players[i].name);
+}
+
+console.log(playerNames)
 // * Create an array of the names of the players who average more than 10 points per game.
+
+var playerNames = [];
+for(let i=0; i<players.length; i++){
+  if(players[i].avgPoints > 10){
+  playerNames.push(players[i].name);
+  }
+}
+
+console.log(playerNames);
+
+
+
 // * Create an array of the names of the players who average more than 5 rebounds per game.
+var boardCrashers = [],
+var playerNames = [];
+for(let i=0; i<players.length; i++){
+  if(players[i].avgRebounds > 5){
+  boardCrashers.push(players[i].name);
+  }
+}
+
+console.log(boardCrashers);
+
+
 // * Who is the player with the most points per minute played? Write a program to find that out.
+
+function highPointsPerMinute(player){
+  var averagePointsPerMinute = player.avgPoints/player.avgMinutesPlayed;
+  player.ppm = averagePointsPerMinute;
+  return averagePointsPerMinute;
+}
+for(let i=0; i<players.length; i++){
+  pointsPerMinute(players[i]);
+}
+
+ppmLeader = [];
+for(let i=0; i<players.length; i++){
+  if(ppmLeader.length == 0){
+    ppmLeader.push(players[i])
+  }else if(players[i].ppm > ppmLeader[0]){
+    ppmLeader.pop();
+    ppmLeader,.push(players[i])
+  }
+ }
+
+ console.log(ppmLeader)
+
+
 // * Based on this data, what is the average points score for the team as a whole?
+
+
+
+
+
+
+
+
 
 </script>
