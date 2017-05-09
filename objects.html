@@ -1,0 +1,49 @@
+<script type="text/javascript">
+//this is an empy array.
+// square brackets = array
+var students = [];
+
+// this is an empty object.cury braces = object
+var student = {};
+
+//objects have properties( or key's)
+//console.log(student.name);
+student.name ="hayes";
+student.age = 27
+console.log(student);
+
+student2 = {
+	name:"Stephen",
+	profession: "Student",
+	language: "javascript"
+}
+
+student3 = {
+	name: "Drew",
+	friends: [
+	"YingRong",
+	"Carla",
+	"Daniel"
+	],
+	sayHello: function(nameOfFriend){
+		console.log("hello, " + nameOfFriend);
+		}, // or can use return and call it by using console.log}
+	addFriend: function(nameOfFriend){
+		//console.log(this); this is the object we defined above.
+		this.friends.push(nameOfFriend);
+	}
+	function addFriend(object, nameOfFriend){
+		object.friends.push(nameOfFriend)
+	}
+
+}
+
+console.log(student3);
+console.log(student3.friends[1]);
+student3.sayHello("chad");
+student3.sayHello(student3.friends[0]);
+student3.addFriend("Shane");
+console.log(student3.friends)
+student3.friends.push("Shane")
+addFriend(student3, "Shane")
+</script>
