@@ -1,8 +1,14 @@
+#timer-div{
+	backgorund-color:  #00ECB9;
+	text-align: center;
+}
+
+
 h1{
 	color: blue;
 }
 
 canvas{
-	border: 10px solid black;
+	border: 10px groove pink;
 	margin:  10px;
 }
