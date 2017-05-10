@@ -1,0 +1,58 @@
+<script type="text/javascript">
+
+// function Player(name, position, avgM,avgP, avgR, starter,species = "human"){
+	//these are not properties, dont need to use comma's. declared variables above but undefined. 
+function Player(name, position, avgM,avgP, avgR, starter,species = "human"){
+	this.name = name;
+	this.position = position;
+	this.avgM = avgM;
+	this.avgP = avgP;
+	this.avgR = avgR;
+	this.starter = starter;
+	// this.species = species
+
+	// this.reportPPM = function(){
+	// 	var ppm = this.avgP / this.avgM;
+		// ppm = Math.round(ppm * 100 / 100);
+	// 	return ppm;
+	// }
+}
+
+Player.prototype.reportPPM = function(){
+		var ppm = this.avgP / this.avgM;
+		ppm = Math.round(ppm * 100 / 100);
+		return ppm;
+
+}
+//prototype-attribute everyone that gets passes in wiil go through the function. ( everyone wll share the same property) m
+
+Player.prototype.species = "Human"
+// everyones species is Human, only have to remember one time, you dont have to keep repeating yourself with the same information for the sake of the computer, not for the sake of us.
+
+var player1 = new Player ("Steph Curry", 
+	"PG",39.2,25.3,4.5,true,);
+var player2 = new Player (" Kevin Durant", 
+	"SF",41.2,25.1,8.3,true,);
+var player3 = new Player (" Clay Thompson", 
+	"SG",40.2,22.3,3.7,true,);
+//new keyword = instantiating a new object {} in JS.
+// console.log(player1.name);
+// console.log(player1.position);
+// console.log(player1);
+console.log(player1.reportPPM());
+console.log(player2.reportPPM());
+console.log(player3.reportPPM());
+console.log(player1);
+console.log(player1.species)
+player2.species= "robot";
+console.log(player2.species)
+console.log(player2);
+
+
+
+
+
+
+
+
+</script>
