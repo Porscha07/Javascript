@@ -1,15 +1,31 @@
 body{
 	height: 100vh;
-	background:url('http://www.pageresource.com/wallpapers/wallpaper/disney-princess-christmas.jpg') no-repeat center ;
+	background:url('http://sermonspiceuploads.s3.amazonaws.com/479/fp_47062/8322b081_full.jpg') no-repeat center ;
 	background-size: cover;
 	text-align: center;
 }
 
-h1{
-	color: #396;
+/*   .header-text{
+	color: #fff;
 	font-size: 40px;
+	position: relative;
+	display: inline-block;
 	margin: 40px 0px 20px;
+	border: 10px groove yellow;
+    width: webkit-fill-available;
+    box-shadow: 6px 7px 4px 5px black;
+} */
+	.header{
+	 color: #ff0000; 
+	 font-size: 40px; 
+	 position: relative; 
+	 display: inline-block; 
+	 margin: 40px 0px 20px;
+	 border: 10px groove yellow;
+     width: webkit-fill-available;
+	 box-shadow: 6px 7px 4px 5px black;
 }
+
 
 #timer-div{
 	background-color:  #00ECB9;

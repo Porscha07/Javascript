@@ -27,12 +27,16 @@ Timer.prototype.updateTimer = function(){
 	this.secondsSpan.innerHTML =  this.seconds;
 }
 // var endDate = new Date();
-var endDate = new Date(Date.parse('December 25,2017'));
+var endDate = new Date(Date.parse('August 9, 2017'));
 console.log(endDate);
 
-var disneyChristmasTimer = new Timer('timer-div', endDate);
+var graduationTimer = new Timer('timer-div', endDate);
 setInterval(
 	function(){
-		disneyChristmasTimer.updateTimer();
+		graduationTimer.updateTimer();
 	}, 1000
 )
+// var audio = document.getElementById('Jeopardy-theme-song.mp3').play(audio);
+	function play_single_sound() {
+		document.getElementById('audiotag1').play();
+	}

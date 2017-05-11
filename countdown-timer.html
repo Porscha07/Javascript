@@ -2,14 +2,21 @@
 <html>
 <head>
 	<title>Countdown to GRADUATION</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" no repeat center>
 	<link rel="stylesheet" type="text/css" href="countdown.css">
+
 
 </head>
 <body>
 <div class="container">
-	<div class= "col-md-4-offset col-md-4 h1">
-<h1>Countdown to <strong>GRADUATION</strong></h1>
-<div id="timer-div">
+	<div class= "col-md-4-offset col-md-12 header">
+		<div id="header-text">
+			<!-- <h1>Countdown to <strong>GRADUATION</strong></h1> -->
+			<marquee behavior="scroll" direction="left"><h1>Countdown to <strong>GRADUATION</strong></h1></marquee>
+		</div>
+	</div>
+	<div class="col=md=12 main-container">
+	<div id="timer-div">
 	<div class="time-unit">
 		<span class="weeks"></span>
 		<span class="smalltext">Weeks</span>
@@ -33,10 +40,11 @@
 	</div>
 </div>
 
-</div>
-
+<audio id="audiotag1" src='Jeopardy-theme-song.mp3' preload="auto"></audio>
+<a href="javascript:play_single_sound();">Play 5-sec sound on single channel</a>
 
 <script type="text/javascript" src="countdown-timer.js">
+
 </script>
 </body>
 </html>
