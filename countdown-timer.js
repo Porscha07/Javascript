@@ -36,7 +36,7 @@ setInterval(
 		graduationTimer.updateTimer();
 	}, 1000
 )
-// var audio = document.getElementById('Jeopardy-theme-song.mp3').play(audio);
+var audio = document.getElementById(audiotag1).play('Vitamin_C_-_Graduation_Friends_Forever_As_we_go_on_we_remember_All_the_times_we_had_together_And_(mp3.pm');
 	function play_single_sound() {
 		document.getElementById('audiotag1').play();
 	}
