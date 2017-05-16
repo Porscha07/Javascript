@@ -1,0 +1,53 @@
+<!-- Scope
+-determines what can see a variable.
+
+-Global- top leveL, EVERYONE can see and change a global.
+-- in Python these are all the way to the left.
+---want to make most things a global in the beginning of your career.
+
+-Local- inside of a function, only visible internally and to child functions -->.
+
+<script type="text/javascript">
+// This is a global variable. It belongs to..the WINDOW OBJECT!!!
+	var imAGlobal = 1;
+	function checkScope(){
+		var imAGlobal = 2;
+		// In spite of the misleading name, this is a local variable, it is NOT VISIBLE outside(above) this function
+		console.log("local var",imAGlobal); // 2
+		// unless you have specific reason to do this, AVOID.
+		// putting window. in front of anything will access the global scope. We can still access the global variable even though we have a local variable with the same name, but we have to tell it we want the global copy. 
+		// Hirarchy- Window(global),checkScope(parent),child(child) ( child can see parent and global,parent can only see global, global can't see child or parent.
+		console.log("global var",window.imAGlobal); // 1
+		function child(){
+			imAGlobal = 3;
+			console.log("inside of child",imAGlobal);
+		}
+		child();
+		console.log("after child", imAGlobal)
+	}
+	console.log(window.checkScope);
+	checkScope();
+// ******************************************************************************
+	//global copy of x
+	var x = 1;
+	function hoistingTest(){
+		// based on scope, hoistingTest can see the global x
+		console.log(x);
+		// local scope of x
+		var x = 2; 
+		// hoisting will do this, all vars are moved to the top of the function/scope immediately with out their value
+		// var x;
+		// x = 2;
+		// this will be a global variable because there is no var. the child function looks up level after leve for a var. It if never finds one, it adds the var to the global scope. Avoid this by always using var to declare.
+		y = 3;
+
+	}
+	hoistingTest(); //undefined
+	console.log(y);
+	//HOISTING-
+	//put your vars at the tope of a function, or JS will do it for you.
+
+// ************************************************************************************
+
+</script>
+
