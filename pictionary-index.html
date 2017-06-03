@@ -7,14 +7,15 @@
 
 	<style type="text/css" media="screen">
 	body{
-		background: "pexels-photo-27599.jpg" ;
-	}
+		background:url('pexels-photo-27599.jpg') no-repeat center ;
+		background-size: 1920px 1300px;
+		}
 	#canvas{
 		border: 10px groove pink;
 		margin:  10px;
 		position: relative;
-		left: 654px;
-		top: 40px;
+		right: -294px;
+		top: 149px;
 		background-color: white;
 		text-align: center;
 	}
@@ -27,22 +28,42 @@
 		color:black ;
 		background-color: white;
 		left: 326px;
+		top: 144px;
 	}
-	.toolbar-text1{
-		border: 10px groove pink;
+	#toolbar-text1{
+		/* border: 10px groove pink; */
 		margin: 10px;
 		position: relative;
 		text-align: center;
 		color:black ;
-		background-color: white;
+		/* background-color: white; */
+		font-family: "Times New Roman", Georgia, Serif;
+		font-size: 14px;
+		display: inline-block;
 	}
-	.toolbar-text2{
-		border: 10px groove pink;
+	#toolbar-text1 button{
+		border: 5px groove pink;
+	}
+	#toolbar-text2{
+		/* border: 10px groove pink; */
 		margin: 10px;
 		position: relative;
 		text-align: center;
 		color:black ;
-		background-color: white;
+		/* background-color: white; */
+		font-family: "Times New Roman", Georgia, Serif ;
+		font-size: 14px;
+		display: inline-block;
+		right: 340px;
+	}
+
+	#toolbar-text2 button{
+		border: 5px groove pink;
+	}
+	.header{
+		color: white;
+		font-size:  20px;
+		text-align:center;
 	}
 
 
@@ -51,24 +72,26 @@
 
 </head>
 <div class="container">
-<body background ="pexels-photo-27599.jpg">
+<body background ="pexels-photo-27599.jpg" no repeat>
+		<div class ="col-md-4 header"
+			<marquee behavior="scroll" direction="left"><h1><strong>"Welcome to Porscha's Tropical Drawing Game!!!"</strong></h1></marquee>
+		</div>
 
-<div class= "col-md-4-offset col-md-4 toolbar">
+<!-- <div class= "col-md-4-offset col-md-4 toolbar"> -->
 	<div id= "toolbar-text1">
-		<marquee behavior="scroll" direction="left"><h1><label><strong><h6>Choose your marker color</h6></strong></label></marquee>
-		<input type="color" id="color-picker"/>
+		<button><h1><label><strong><h6>Choose your marker color</h6></strong></label></button>
+		<button><input type="color" id="color-picker"/></button>
 	</div>
 	<div id="toolbar-text2">
-		<label><strong><h6> Choose your marker thickness<h6></strong></label>
-		<input type="number" id="thickness" value= 10>
+		<button>
+		<h1><label><strong><h6>Choose your marker color</h6></strong></label></button>
+		<button><input type="number" id="thickness" value= 10></button>
 	</div>
 </div>
 </div>
-
 <canvas id="canvas" height="500px" width="500px">
 
 </canvas>
-
 
 <script type="text/javascript" src ="pictionary.js">
 
